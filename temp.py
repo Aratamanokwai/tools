@@ -7,6 +7,8 @@
 # Version. 0.00: 雛形
 # Version. 1.00: 初版
 """雛形
+
+>>> import temp
 """
 
 # 電子書類の情報
