@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 #
-# $Id: .bashrc,v 1.5 2020/02/01 07:26:23 ozawa3 Exp ozawa3 $
+# $Id: .bashrc,v 1.6 2020/03/27 01:36:41 ozawa3 Exp $
 
 # If not running interactively, don't do anything
 case $- in
@@ -96,7 +96,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/usr/local/cuda/bin:/usr/sbin:~/GitHub/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/cuda/bin:/usr/sbin:~/GitHub/bin:$GOPATH/bin
 export LD_LIBRARY_PATH=/usr/local/cuda/lib
 export PYTHONPATH=/usr/lib/python3.6/dist_packages:~/GitHub/py3
 
