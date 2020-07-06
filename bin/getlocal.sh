@@ -6,10 +6,22 @@
 # Description:
 # Gathers general system information and dumps it to a file.
 #
-# Usage: bash getlocal.sh < cmds.txt
-#   cmds.txt is a file with list of commands to run.
-#
 
+function usage()
+{
+    echo "Usage: bash getlocal.sh < cmds.txt"
+    echo "  cmds.txt is a file with list of commands to run."
+}
+
+# PARSE option argments:
+while getopts 'h' opt; do
+  case "${opt}" in
+    h) # help
+        usage
+        exit 0 ;;
+  esac
+done
+shift $((OPTIND - 1))
 # SepCmds - Separate the commands from the line of input
 function SepCmds()
 {

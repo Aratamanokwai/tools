@@ -5,10 +5,22 @@
 #
 # Description:
 # Distinguish between MS-Windows/Linux/MacOS
-#
-# Usage: bash osdetect.sh
-#   output will be one of: Linux MSWin macOS
-#
+
+function usage()
+{
+    echo "Usage: bash osdetect.sh"
+    echo "  output will be one of: Linux MSWin macOS"
+}
+
+# PARSE option argments:
+while getopts 'h' opt; do
+  case "${opt}" in
+    h) # help
+        usage
+        exit 0 ;;
+  esac
+done
+shift $((OPTIND - 1))
 
 if type -t wevtutil &> /dev/null
 then
