@@ -16,16 +16,20 @@ alias ff 'firefox'
 alias md 'mkdir'
 alias ping 'ping -c 4'
 alias py3 'python3'
+alias opy 'python3 -O'
 alias cl 'ci -l'
 alias tp 'trash-put'
 alias tr 'trash-restore'
 alias tl 'trash-list'
 alias te 'trash-empty'
 alias hc 'hexcurse'
+alias pds 'pydocstyle'
 
 # some more ls aliases
 alias ll 'ls -alF'
 alias la 'ls -A'
+
+alias ascii "egrep -a -o '\b[[:print:]]{2,}\b'"
 
 #alias l 'ls -CF'
 alias info 'info --vi-keys'
