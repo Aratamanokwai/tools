@@ -34,8 +34,7 @@ EX_USAGE = 64
 ## 以下に自作符號
 
 
-if '__main__' == __name__:
-
+def main():
     # パーサーを作る
     parser = argparse.ArgumentParser(
             prog='kausei.py',
@@ -75,3 +74,8 @@ if '__main__' == __name__:
 
     (_vb and print('[*] kausei.py'))
     (_vb and print(f'{args}'))
+# End of def main():
+
+
+if '__main__' == __name__:
+    main()
